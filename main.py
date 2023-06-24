@@ -47,7 +47,7 @@ def handle_ts():
 
 # ----------------
 
-@app.route("/api-v2")
+@app.route("/api-v2/<string:channel_id>.m3u8")
 def handle_api2():
     channel_id = request.args.get("id")
 
