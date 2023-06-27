@@ -15,7 +15,7 @@ def get_base_url(url):
 
 @app.route("/")
 def credit():
-    return "(CricHD-API) Made With ðŸ’— By Sabbiriptv"
+    return "(CricHD-API) Made With ❤️ — By Tahsin Ahmed Dipto"
 
 @app.route("/api/<string:channel_id>.m3u8")
 def handle_api(channel_id):
@@ -48,7 +48,7 @@ def handle_ts():
 # ----------------
 
 @app.route("/api-v2/<string:channel_id>.m3u8")
-def handle_api2(channel_id):
+def handle_api-v2(channel_id):
     
     response = requests.get(f"https://millionscast.com/crichdwas.php?player=desktop&live={channel_id}", headers={"Referer": "https://stream.crichd.vip/"})
 
@@ -72,7 +72,7 @@ def handle_api2(channel_id):
     return myresponse
 
 @app.route("/ts-v2")
-def handle_ts2():
+def handle_ts-v2():
     ts_id = request.args.get("id")
     base = request.args.get("base")
     final = base + ts_id
